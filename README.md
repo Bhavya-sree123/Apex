@@ -1,8 +1,8 @@
 Apex Planet Internship Tasks
 
 👩‍💻 About
-This repository contains all the tasks, assignments, and mini-projects completed during my Web Development Internship at Apex Planet.
-Each task showcases my learning progress, coding skills, and practical implementation of front-end and back-end web technologies.
+This repository contains all the tasks and mini-projects completed during my Web Development Internship at Apex Planet.
+Each task showcases my learning progress, coding skills, and practical implementation of front-end web technologies.
 
 📁 Repository Structure
 Apex/
