@@ -6,7 +6,7 @@
   <title>Learn HTML, CSS & JavaScript</title>
 
   <style>
-    // General Page Styling //
+    /* ===== General Page Styling ===== */
     body {
       font-family: "Poppins", sans-serif;
       margin: 0;
@@ -32,13 +32,14 @@
       font-size: 1.1em;
     }
 
-    //3-Column Layout//
+    /* ===== 3-Column Layout ===== */
     .container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      padding: 30px;
+      align-items: stretch;
+      flex-wrap: wrap;
       gap: 20px;
+      padding: 40px;
     }
 
     section {
@@ -46,9 +47,14 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       flex: 1 1 300px;
-      max-width: 400px;
+      max-width: 350px;
       padding: 20px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
     }
 
     section h2 {
@@ -57,7 +63,7 @@
     }
 
     section img {
-      width: 120px;
+      width: 100px;
       margin: 10px 0;
     }
 
@@ -115,19 +121,20 @@
 </head>
 <body>
 
-  // Header //
+  <!-- Header -->
   <header>
-    <h1>Basics Of Web Development </h1>
+    <h1>Basics Of Web Development</h1>
     <p>Understand the structure and syntax of HTML, CSS, and JavaScript</p>
   </header>
 
+  <!-- Container -->
   <div class="container">
 
-    // HTML Section //
+    <!-- HTML Section -->
     <section id="html">
       <h2>HTML (Structure)</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
-      <p>HTML (HyperText Markup Language) defines the structure of a webpage. It organizes content using tags.</p>
+      <p>HTML defines the structure of a webpage. It organizes content using tags.</p>
 
       <h3>Basic HTML Structure:</h3>
       <pre><code>&lt;!DOCTYPE html&gt;
@@ -136,61 +143,54 @@
     &lt;title&gt;My Webpage&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
     &lt;p&gt;This is a paragraph.&lt;/p&gt;
-    &lt;img src="logo.png" alt="Sample Image"&gt;
-    &lt;a href="#"&gt;Click Here&lt;/a&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 
       <p><strong>Key Elements:</strong><br>
-        &lt;h1&gt;...&lt;/h1&gt; - Used for headings<br>
-        &lt;p&gt;...&lt;/p&gt; - Used for paragraphs<br>
-        &lt;img src="..." alt="..."&gt; - Used to display images<br>
-        &lt;a href="..."&gt;...&lt;/a&gt; - Used for links<br>
-        &lt;button&gt;...&lt;/button&gt; - Used for clickable buttons
+        &lt;h1&gt;...&lt;/h1&gt; - Headings<br>
+        &lt;p&gt;...&lt;/p&gt; - Paragraphs<br>
+        &lt;img&gt; - Images<br>
+        &lt;a&gt; - Links<br>
+        &lt;button&gt; - Buttons
       </p>
     </section>
 
-    // CSS Section //
+    <!-- CSS Section -->
     <section id="css">
       <h2>CSS (Styling)</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
-      <p>CSS (Cascading Style Sheets) is used to design the appearance of a webpage by adding colors, fonts, spacing, and layouts.</p>
+      <p>CSS is used to design the look of a webpage by adding colors, fonts, and layouts.</p>
 
-      <h3>Basic CSS Structure:</h3>
+      <h3>Basic CSS:</h3>
       <pre><code>body {
   background-color: lightblue;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
 h1 {
   color: navy;
   text-align: center;
-}
-
-p {
-  font-size: 18px;
-  color: #333;
 }</code></pre>
 
       <p><strong>Key CSS Properties:</strong><br>
-        color - Sets text color<br>
-        font-size - Sets size of text<br>
-        background-color - Sets background color<br>
-        text-align - Aligns text<br>
-        margin, padding - Adjust spacing
+        color - Text color<br>
+        font-size - Text size<br>
+        background-color - Background color<br>
+        text-align - Text alignment<br>
+        margin, padding - Spacing
       </p>
     </section>
 
-    // JavaScript Section //
+    <!-- JavaScript Section -->
     <section id="javascript">
       <h2>JavaScript (Interactivity)</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
-      <p>JavaScript adds interactivity to a webpage. It can respond to user actions like clicks, input, or movement.</p>
+      <p>JavaScript adds interactivity to a webpage and responds to user actions.</p>
 
-      <h3>Basic JavaScript Structure:</h3>
+      <h3>Basic JavaScript:</h3>
       <pre><code>&lt;script&gt;
 function showMessage() {
   alert("Hello! You clicked the button!");
@@ -199,10 +199,10 @@ function showMessage() {
 </code></pre>
 
       <p><strong>Common Uses:</strong><br>
-        🟢 Showing alerts<br>
-        🟢 Changing HTML content<br>
-        🟢 Form validation<br>
-        🟢 Animations
+        ✅ Alerts<br>
+        ✅ Changing HTML content<br>
+        ✅ Form validation<br>
+        ✅ Animations
       </p>
 
       <button onclick="showMessage()">Click Me!</button>
@@ -213,7 +213,6 @@ function showMessage() {
     <p>© 2025 Learn HTML, CSS & JavaScript — Designed by Bhavya Sree</p>
   </footer>
 
-  // JavaScript Function //
   <script>
     function showMessage() {
       alert("Great! You are exploring JavaScript now 🎉");
