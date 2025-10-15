@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn HTML, CSS & JavaScript</title>
+
+  <style>
+    // General Page Styling //
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f7faff;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1em;
+    }
+
+    //3-Column Layout//
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    section {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #023047;
+      font-size: 1.6em;
+    }
+
+    section img {
+      width: 120px;
+      margin: 10px 0;
+    }
+
+    section p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: left;
+      overflow-x: auto;
+      font-family: "Courier New", monospace;
+      font-size: 15px;
+    }
+
+    code {
+      color: #d6336c;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #ffb703;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #fb8500;
+    }
+
+    footer {
+      background-color: #023047;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  // Header //
+  <header>
+    <h1>Basics Of Web Development </h1>
+    <p>Understand the structure and syntax of HTML, CSS, and JavaScript</p>
+  </header>
+
+  <div class="container">
+
+    // HTML Section //
+    <section id="html">
+      <h2>HTML (Structure)</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
+      <p>HTML (HyperText Markup Language) defines the structure of a webpage. It organizes content using tags.</p>
+
+      <h3>Basic HTML Structure:</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;img src="logo.png" alt="Sample Image"&gt;
+    &lt;a href="#"&gt;Click Here&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <p><strong>Key Elements:</strong><br>
+        &lt;h1&gt;...&lt;/h1&gt; - Used for headings<br>
+        &lt;p&gt;...&lt;/p&gt; - Used for paragraphs<br>
+        &lt;img src="..." alt="..."&gt; - Used to display images<br>
+        &lt;a href="..."&gt;...&lt;/a&gt; - Used for links<br>
+        &lt;button&gt;...&lt;/button&gt; - Used for clickable buttons
+      </p>
+    </section>
+
+    // CSS Section //
+    <section id="css">
+      <h2>CSS (Styling)</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
+      <p>CSS (Cascading Style Sheets) is used to design the appearance of a webpage by adding colors, fonts, spacing, and layouts.</p>
+
+      <h3>Basic CSS Structure:</h3>
+      <pre><code>body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: navy;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}</code></pre>
+
+      <p><strong>Key CSS Properties:</strong><br>
+        color - Sets text color<br>
+        font-size - Sets size of text<br>
+        background-color - Sets background color<br>
+        text-align - Aligns text<br>
+        margin, padding - Adjust spacing
+      </p>
+    </section>
+
+    // JavaScript Section //
+    <section id="javascript">
+      <h2>JavaScript (Interactivity)</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+      <p>JavaScript adds interactivity to a webpage. It can respond to user actions like clicks, input, or movement.</p>
+
+      <h3>Basic JavaScript Structure:</h3>
+      <pre><code>&lt;script&gt;
+function showMessage() {
+  alert("Hello! You clicked the button!");
+}
+&lt;/script&gt;
+</code></pre>
+
+      <p><strong>Common Uses:</strong><br>
+        🟢 Showing alerts<br>
+        🟢 Changing HTML content<br>
+        🟢 Form validation<br>
+        🟢 Animations
+      </p>
+
+      <button onclick="showMessage()">Click Me!</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Learn HTML, CSS & JavaScript — Designed by Bhavya Sree</p>
+  </footer>
+
+  // JavaScript Function //
+  <script>
+    function showMessage() {
+      alert("Great! You are exploring JavaScript now 🎉");
+    }
+  </script>
+
+</body>
+</html>
