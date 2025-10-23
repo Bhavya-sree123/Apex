@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate HTML, CSS, and JavaScript</title>
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f5faff;
+      color: #333;
+    }
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    h2 {
+      color: #0077b6;
+    }
+
+    /* ===== Layout Using Flexbox and CSS Grid ===== */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Contact Form Styles ===== */
+    .contact-form {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form label {
+      display: block;
+      margin: 10px 0 10px;
+      font-weight: 500;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .contact-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .contact-form button:hover {
+      background: #005f8d;
+    }
+
+    /* ===== To-Do List Styles ===== */
+    .todo {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .todo input {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+    .todo button {
+      background: #00b4d8;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .todo button:hover {
+      background: #0096c7;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    li button {
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Intermediate HTML, CSS, and JavaScript</h1>
+    <p>Task 2 project - contact-form & Dynamic To-Do List</p>
+  </header>
+
+  <div class="container">
+
+    <!-- ===== Contact Form Using HTML and CSS ===== -->
+    <div class="contact-form">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        
+        <lable for="mobile number">Mobile Number:</label>
+        <input type="text" id="mobile number" placeholder="Enter your mobile number">
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Your message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- ===== Dynamic To-Do List Using JavaScript ===== -->
+    <div class="todo">
+      <h2>Dynamic To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add new task">
+      <button onclick="addTask()">Add</button>
+
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <script>
+    // ===== JavaScript Form Validation =====
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mobileNumber = document.getElementById("mobile number").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (name === "" || email === "" || message === "") {
+        alert("All fields are required!");
+      } else if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+      } else if (mobileNumber === "" || isNaN(mobileNumber) || mobileNumber.length < 10) {
+        alert("Please enter a valid mobile number.");
+      }
+        else {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+    });
+
+    // ===== Dynamic To-Do List =====
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const taskList = document.getElementById("taskList");
+
+      if (taskInput.value.trim() === "") {
+        alert("Enter a task!");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = taskInput.value;
+
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "X";
+      removeBtn.onclick = function() {
+        li.remove();
+      };
+
+      li.appendChild(removeBtn);
+      taskList.appendChild(li);
+      taskInput.value = "";
+    }
+  </script>
+
+</body>
+</html>
