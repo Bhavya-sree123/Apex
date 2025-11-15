@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavya Sree | Portfolio</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #ecf0f1;
+}
+nav {
+  background: #34495e;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+nav a:hover {
+  background: #2c3e50;
+}
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* ===== About Section ===== */
+#about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== To-Do List ===== */
+#todo-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+#todo-section input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#todo-section button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#taskList {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+#taskList li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#taskList li span {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+#products {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.controls select {
+  padding: 8px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+.product {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #ccc;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bhavya Sree</h1>
+  <p>CSE-AIML Student | Web Developer | Tech Enthusiast</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#todo-section">To-Do App</a>
+  <a href="#products">Products</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Computer Science student specializing in Artificial Intelligence and Machine Learning. 
+    I enjoy creating responsive web applications using HTML, CSS, and JavaScript, 
+    and exploring Python, C, and Java programming. My goal is to gain hands-on 
+    experience through real-world projects and contribute to impactful solutions. 
+    I have developed a <strong>Dynamic To-Do List App</strong> and a <strong>Product Listing page</strong> as part of my web development projects.
+  </p>
+</section>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Personal Portfolio Website</h3>
+      <p>A responsive portfolio website built using HTML and CSS, featuring sections like About, Projects, Resume, and Certificates.</p>
+    </div>
+    <div class="project-card">
+      <h3>To-Do List Web App</h3>
+      <p>A task management app built with HTML, CSS, and JavaScript. Users can add, delete, and mark tasks as complete. Local storage saves all tasks.</p>
+    </div>
+    <div class="project-card">
+      <h3>Product Listing  Task</h3>
+      <p>A simple product listing web page with categories like Watches, Laptops, and Mobiles. Users can filter and sort products based on category and price.</p>
+    </div>
+  </div>
+</section>
+<section id="todo-section">
+  <h2>Dynamic To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Add a new task..." />
+  <button id="addTask">Add</button>
+  <ul id="taskList"></ul>
+</section>
+<section id="products">
+  <h2>Product Listing</h2>
+  <div class="controls">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="watch">Watches</option>
+      <option value="laptop">Laptops</option>
+      <option value="mobile">Mobiles</option>
+    </select>
+    <select id="sortBy">
+      <option value="none">Sort by</option>
+      <option value="low-high">Price: Low to High</option>
+      <option value="high-low">Price: High to Low</option>
+    </select>
+  </div>
+  <div class="product-list" id="productList"></div>
+</section>
+<footer>
+  &copy; 2025 Bhavya Sree. All rights reserved.
+</footer>
+<script>
+const taskInput = document.getElementById('taskInput');
+const addTask = document.getElementById('addTask');
+const taskList = document.getElementById('taskList');
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+function renderTasks(){
+  taskList.innerHTML = '';
+  tasks.forEach((t,i)=>{
+    const li = document.createElement('li');
+    li.textContent = t;
+    const del = document.createElement('span');
+    del.textContent = '×';
+    del.onclick = ()=>{tasks.splice(i,1);saveTasks();};
+    li.appendChild(del);
+    taskList.appendChild(li);
+  });
+}
+function saveTasks(){
+  localStorage.setItem('tasks',JSON.stringify(tasks));
+  renderTasks();
+}
+addTask.onclick = ()=>{
+  if(taskInput.value){
+    tasks.push(taskInput.value);
+    saveTasks();
+    taskInput.value='';
+  }
+}
+renderTasks();
+const products = [
+  {name:'Luxury Watch', category:'watch', price:2499, img:'https://images.pexels.com/photos/998530/pexels-photo-998530.jpeg?auto=compress&cs=tinysrgb&w=600'},
+  {name:'Sports Watch', category:'watch', price:3299, img:'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600'},
+  {name:'Gaming Laptop', category:'laptop', price:69999, img:'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600'},
+  {name:'Office Laptop', category:'laptop', price:45999, img:'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=600'},
+  {name:'Android Smartphone', category:'mobile', price:15999, img:'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600'}
+];
+
+const productList = document.getElementById('productList');
+const categoryFilter = document.getElementById('categoryFilter');
+const sortBy = document.getElementById('sortBy');
+
+function renderProducts(list){
+  productList.innerHTML='';
+  list.forEach(p=>{
+    const card=document.createElement('div');
+    card.className='product';
+    card.innerHTML=`
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>₹${p.price}</p>`;
+    productList.appendChild(card);
+  });
+}
+
+function applyFilters(){
+  let filtered=[...products];
+  if(categoryFilter.value!=='all'){
+    filtered=filtered.filter(p=>p.category===categoryFilter.value);
+  }
+  if(sortBy.value==='low-high'){filtered.sort((a,b)=>a.price-b.price);}
+  if(sortBy.value==='high-low'){filtered.sort((a,b)=>b.price-a.price);}
+  renderProducts(filtered);
+}
+
+categoryFilter.onchange=applyFilters;
+sortBy.onchange=applyFilters;
+renderProducts(products);
+</script>
+
+</body>
+</html>
